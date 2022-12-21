@@ -1,5 +1,5 @@
-/*Programa presentado por ANDREY FELIPE OROZCO MONTOYA 20221578022
-La función main() controla la ejecución de las funciones leer(xxx),
+/*
+La funciÃ³n main() controla la ejecuciÃ³n de las funciones leer(xxx),
 mostrar(xxx) y guardar(xxx, yyy), las cuales se implementan utilizando plantillas
 (template<class T>).*/
 #include <iostream>
@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 	int edad [3][2];//Definicion de matrices que guardan la informacion
 	string nombre [3][2];
 	float precio [3][2];
-	llenar (edad);//Envio de las matrices a las funciones que se inicialice su valor las matrices numericas(añadido por el estudiante)
+	llenar (edad);//Envio de las matrices a las funciones que se inicialice su valor las matrices numericas(aÃ±adido por el estudiante)
 	llenar (precio);
 	leer (edad);//Envio de las matrices a las funciones que llenan su valor por medio del usuario
 	leer (precio);
