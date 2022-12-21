@@ -1,4 +1,4 @@
-//Programa presentado por Andrey Felipe Orozco Montoya---20221578022
+
 #include <iostream>//Inclucion de bibliotecas y funcionalidades a usar
 using std::cout;
 using std::endl;
