@@ -1,4 +1,4 @@
-//Codigo presentado por ANDREY FELIPE OROZCO MONTOYA 20221578022
+
 #include "lista.h"
 #include <fstream>
 using std::ifstream;
