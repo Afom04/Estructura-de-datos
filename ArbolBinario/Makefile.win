@@ -1,0 +1,37 @@
+# Project: arboles
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = principal.o nodoArbol.o arbol.o persona.o
+LINKOBJ  = principal.o nodoArbol.o arbol.o persona.o
+LIBS     = -L"D:/Dev5.1/Dev-Cpp/MinGW64/lib" -L"D:/Dev5.1/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -L"D:/Dev5.1/Dev-Cpp/lib" -static-libgcc
+INCS     = -I"D:/Dev5.1/Dev-Cpp/MinGW64/include" -I"D:/Dev5.1/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev5.1/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev5.1/Dev-Cpp/include"
+CXXINCS  = -I"D:/Dev5.1/Dev-Cpp/MinGW64/include" -I"D:/Dev5.1/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev5.1/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev5.1/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"D:/Dev5.1/Dev-Cpp/include"
+BIN      = arboles.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+principal.o: principal.cpp
+	$(CPP) -c principal.cpp -o principal.o $(CXXFLAGS)
+
+nodoArbol.o: nodoArbol.cpp
+	$(CPP) -c nodoArbol.cpp -o nodoArbol.o $(CXXFLAGS)
+
+arbol.o: arbol.cpp
+	$(CPP) -c arbol.cpp -o arbol.o $(CXXFLAGS)
+
+persona.o: persona.cpp
+	$(CPP) -c persona.cpp -o persona.o $(CXXFLAGS)
